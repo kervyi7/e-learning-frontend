@@ -34,11 +34,11 @@ const App = () => {
       <Routes>
         {!user ? (
           <Route path="*" element={<AuthPage onLogin={handleLogin} />} />
-        ) : user.role === "Student" ? (
+        ) : (user.role === "Student" || user.role === "student") ? (
           <>
             <Route path="/courses" element={<Courses onLogout={handleLogout} />} />
             <Route path="/teachers" element={<TeachersPage onLogout={handleLogout} />} />
-            {/* <Route path="/dashboard" element={<Dashboard onLogout={handleLogout} />} /> */}
+            <Route path="/dashboard" element={<Dashboard onLogout={handleLogout} />} />
             <Route path="*" element={<Navigate to="/courses" />} />
           </>
         ) : (
