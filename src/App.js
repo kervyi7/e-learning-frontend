@@ -38,7 +38,7 @@ const App = () => {
           <>
             <Route path="/courses" element={<Courses onLogout={handleLogout} />} />
             <Route path="/teachers" element={<TeachersPage onLogout={handleLogout} />} />
-            <Route path="/dashboard" element={<Dashboard onLogout={handleLogout} />} />
+            {/* <Route path="/dashboard" element={<Dashboard onLogout={handleLogout} />} /> */}
             <Route path="*" element={<Navigate to="/courses" />} />
           </>
         ) : (

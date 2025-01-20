@@ -38,9 +38,9 @@ const Header = ({ onLogout }) => {
         <li>
           <Link to="/teachers">Teachers</Link>
         </li>
-        <li>
+        {/* <li>
           <Link to="/dashboards">Dashboards</Link>
-        </li>
+        </li> */}
       </ul>
       <div className="user-menu">
         <button className="user" onClick={() => setIsMenuOpen(!isMenuOpen)}>
